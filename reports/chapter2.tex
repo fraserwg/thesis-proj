@@ -1,0 +1,287 @@
+\chapter{Symmetric instability}
+\begin{quote}
+    \textit{In real life there is no algebra} --- Audrey Horne
+\end{quote}
+
+This chapter examines symmetric instability and its sub-classifications through several linear instability analyses. This work builds extensively on sections of~citep{Goldsworth2021}. Sections XXXXXX are new.
+
+\section{Inviscid symmetric instability of parallel shear flow}
+    The Boussinesq equations of motion for a meridionally symmetric fluid on an $f$-plane, with the complete Coriolis force, and in the limit in which the horizontal length scale is much larger than the vertical length scale, are
+    \begin{subequations}
+    \begin{equation}
+        % \bigg( \pdv{t} + u \pdv{x} + w \pdv{z} \bigg)
+        \frac{Du}{Dt} - fv - \pdv{\phi}{x} = 0 \, ,
+    \end{equation}
+    \begin{equation}
+        \frac{Dv}{Dt} + fu = 0 \, ,
+    \end{equation}
+    \begin{equation}
+        \frac{Dw}{Dt} - \pdv{\phi}{z} - b = 0 \, ,
+    \end{equation}
+    \begin{equation}
+        \pdv{u}{x} + \pdv{w}{z} = 0 \, ,
+    \end{equation}
+    and
+    \begin{equation}
+        \frac{Db}{Dt} = 0 \, .
+    \end{equation}
+    \end{subequations}
+
+Here, $\phi$ is the geopotential pressure, $\kappa$ is the buoyancy diffusion coefficient and $F_{NT}$ is the non-traditional component of the Coriolis parameter.
+
+    We now consider a flow which is, initially, purely meridional, with $(u, v, w) = (0, V, 0)$, $\phi = \Phi$ and $b = B$. The flow is in geostrophic balance, hydrostatically balanced and in equilibrium. Mathematically
+    \begin{subequations}
+    \begin{equation}
+        f V = \pdv{\Phi}{x} \, ,
+    \end{equation}
+    \begin{equation}
+        B = \pdv{\Phi}{z} \, ,
+    \end{equation}
+    \begin{equation}
+        \pdv[2]{V}{z} = 0 \, ,
+    \end{equation}
+    \begin{equation}
+        \pdv[2]{B}{x} = 0 \, ,
+    \end{equation}
+    \begin{equation}
+        \pdv{B}{z} = N^2(z) \, ,
+    \end{equation}
+    and
+    \begin{equation}
+        \pdv{B}{x} = M^2 \, .
+    \end{equation}
+    \end{subequations}
+    We can then perturb this balanced flow, giving perturbed variables $(u, v, w) = (u', V + v', w')$, $\phi = \Phi + \phi'$ and $b = B + b'$. Substituting these values into the equations of motion and considering terms only of linear order or lower in the perturbed variables, we find that
+    \begin{subequations}
+    \begin{equation}
+        \label{eq:ZonalMomentum}
+        % geostrophic balance
+        \pdv{u'}{t} - fv' + \pdv{\phi '}{x} = 0 \, ,
+    \end{equation}
+    \begin{equation}
+        \pdv{v'}{t} + u' \pdv{V}{x} + w' \pdv{V}{z} + fu' = 0 \, ,
+    \end{equation}
+    \begin{equation}
+        \label{eq:VerticalMomentum}
+        % Hydrostatic balance
+        \pdv{w'}{t} + \pdv{\phi '}{z} - b' = 0 \, ,
+    \end{equation}
+    \begin{equation}
+        \pdv{b'}{t} + w' \pdv{B}{z} + u' \pdv{B}{x} = 0 \, ,
+    \end{equation}
+    and
+    \begin{equation}
+        \label{eq:Continuity}
+        \pdv{u'}{x} + \pdv{w'}{z} = 0 \, ,
+    \end{equation}
+    \end{subequations}
+
+    From equation~(\ref{eq:Continuity}) we see that, as in the linear stability analysis (section~\ref{sec:LinearStabilityAnalysis}), we can write $u'$ and $w'$ in terms of an overturning streamfunction $\psi$, where $u' = - \partial_z \psi$ and $w' = \partial_x \psi$. We now obtain an equation of motion for the overturning streamfunction. The first step is to differentiate the horizontal and vertical momentum equations (equations~\ref{eq:ZonalMomentum} and~\ref{eq:VerticalMomentum}) with respect to the vertical and zonal coordinates respectively. Subtracting the two equations, differentiating with respect to time and substituting in our equations for $\partial_t b'$ and $\partial_t v'$ gives
+    \begin{equation}
+    \label{eq:OriginalHoskins}
+    \pdv[2]{}{t} \bigg(\pdv[2]{}{x} + \pdv[2]{}{z}\bigg) \psi + \bigg( N^2 \pdv[2]{}{x} - 2 f \pdv{V}{z} \pdv[2]{}{x}{z} + f \zeta \pdv[2]{}{z} \bigg) \psi = 0 \,
+    \end{equation}
+    
+    \subsection{The instability condition}
+    Substituting in trial solutions of the form $\psi = e^{-i(kx + lz + \omega t)}$ we find that
+    
+    \begin{equation}
+        \omega^2 = \frac{(N^2 k^2 - 2 f \partial_z V k l + f \zeta l^2)}{(k^2 + l^2)}
+    \end{equation}
+    
+    \subsection{Orientation of the least stable modes}
+    
+    \subsection{Energetics of the instability}
+    The rate of change of the perturbation kinetic energy is given by
+    \begin{equation}
+       \pdv{E_k}{t} = \frac{\partial}{\partial t} \frac{u'^2 + v'^2 + w'^2}{2}
+    \end{equation}
+    Substituting in equations PARTIAL V'S, we can show that this gives
+    \begin{equation}
+        \pdv{E_k}{t} = - v' (\mathbf{u}'\cdot \grad) V - (\mathbf{u}'\cdot \grad) \phi ' + w' b' 
+    \end{equation}
+    The first term on the right hand side gives the shear production. It corresponds to a transfer of energy from the shear of the mean flow to the turbulent. The term is occasionally split into a ``geostrophic'' and ``lateral'' shear production term. Typically the excitement of symmetric instability leads to to the excitement of overturning cells oriented along isopycnals, with a horizontal length scale much greater than the vertical. If the turbulent motion is along isopycnals then this term can be thought of as an extraction of energy from the along isopycnal shear of the mean flow.
+    
+    The second term on the right hand side is the turbulent pressure work term. Using incompressibility of the turbulent flow we can show that
+    \begin{equation}
+       - (\mathbf{u}'\cdot \grad) \phi ' = - \div{(\mathbf{u'}\phi ')} \, ,
+    \end{equation}
+    i.e. this is a flux. We know that the flux must be zero at the boundaries as a result of the no-normal flow boundary condition, and so we can see that all this term does is advect turbulent kinetic energy around the domain, rather than increase the total turbulent kinetic energy. As such it's relatively boring and we won't consider it any further.
+    
+    This corresponds to the advection of turbulent kinetic energy around the domain. This can be seen most clearly by integrating the quantity over the whole domain. By doing this we can show that
+    \begin{equation}
+        \iint^{0, L}_{z = -H,\, x = 0 } (\mathbf{u'} \cdot \grad ) \phi '\, \dd x \dd z = \int_0^L \phi' w' \rvert ^0_{-H} \dd x + \int_{-H}^0 \phi' u' \rvert^L_0 \dd z
+    \end{equation}
+    As there exists a no normal flow boundary condition at both the surface and lateral boundaries both the right hand side integrands and hence integrals go to zero. This means the pressure work term only moves turbulent kinetic energy around the flow and doesn't extract any kinetic energy from the mean flow.
+    
+    The final term is the turbulent buoyancy flux and corresponds to the turbulent flow extracting gravitational potential energy from the advection of buoyancy anomalies.
+
+\subsection{Gravitational \& inertial instability as limiting cases}
+
+\section{Inviscid symmetric instability of axisymmetric flow}
+\begin{itemize}
+    \item Explain parallel shear flow like a western boundary current and axisymmetric flow like an eddy
+    \item Derive the instability criteria
+    \item Look at a Rankine vortex type flow
+    \item Explain stabilising and destabilising forces of rotation
+    \item Suggest we expect eddy cores to be more stable than outer shells
+\end{itemize}
+
+\section{The classical and energetic definitions of symmetric instability}
+Hoskins [cite] defines symmetric instability as the class of overturning instabilities that occur when the Coriolis parameter and potential vorticity of a flow have opposite signs.
+Under this definition gravitational and inertial (sometimes also referred to as centrifugal) instabilities are limiting cases of symmetric instability.
+
+Intuitively, $fQ<0$ means that the flow has anticyclonic vorticity about the normal to isopycnals. Conversely, $\curl{\mathbf{u}}$ is normal to the plane in which motion occurs. If we use a coordinate system in which the flow is horizontal, the instability condition is satisfied in the event of unstable stratification.
+
+\section{Viscous inertial instability}
+citet{Hoskins1974} shows that an inviscid meridional jet, initially in thermal wind balance and symmetric about the meridional axis, may be linearly unstable and produce overturning in the $x$-$z$ plane. The overturning can be represented as a streamfunction, $\psi$, where the zonal and vertical velocities are given by $u = - \partial_z \psi$ and $w = \partial_x \psi$ respectively. citet{Hoskins1974} shows that the streamfunction, to terms linear in $\psi$, satisfies the partial differential equation
+\begin{equation}
+    \label{eq:OriginalHoskins}
+    \pdv[2]{}{t} \bigg(\pdv[2]{}{x} + \pdv[2]{}{z}\bigg) \psi + \bigg( N^2 \pdv[2]{}{x} - 2 f \pdv{V}{z} \pdv[2]{}{x}{z} + f \zeta \pdv[2]{}{z} \bigg) \psi = 0 \, .
+\end{equation}
+Here $N$ is the buoyancy frequency which is assumed to be constant, $f$ is the planetary vorticity, $V$ is the basic state meridional velocity, and $\zeta$ is the absolute vorticity of the basic state about the vertical.
+The equation is easily generalized to flows with a harmonic vertical viscosity, by replacing $\partial_t$ with $\partial_t - A_r \partial^2_{zz}$, where $A_r$ is the vertical viscosity. 
+
+Solving for $\psi$ in the viscous case is a difficult problem; however, much can be gained by considering a basic flow that is both barotropic and meridional. Thus the term proportional to the vertical shear of the meridional flow is set to zero. The resulting equation is
+\begin{equation}
+    \label{eq:BarotropicHoskins}
+    \bigg(\pdv{}{t} - A_r \pdv[2]{}{z} \bigg)^2 \bigg(\pdv[2]{}{x} + \pdv[2]{}{z}\bigg) \psi + \bigg( N^2 \pdv[2]{}{x} + f \zeta \pdv[2]{}{z} \bigg) \psi = 0 \, ,  
+\end{equation}
+which, strictly speaking, describes the evolution of an inertial instability due to the flow being free of vertical shear.
+
+We can now try to find solutions of the form $\psi(x, z, t) = \hat{\psi}(x)e^{i(mz - \omega t)}$. Substituting this into~(\ref{eq:BarotropicHoskins}), we obtain the following boundary value problem:
+\begin{equation}
+    \frac{(\hat{\omega}^2 - N^2 )}{m^2}\, \dv[2]{\hat{\psi}}{x} + f \zeta \hat{\psi} = \hat{\omega}^2 \hat{\psi}\, ,
+    \label{eq:FullSchrodinger}
+\end{equation}
+where $\hat{\omega} = \omega + i A_r m^2$. Upon appropriate non-dimensionalisation of the coordinates and variables, (\ref{eq:FullSchrodinger}) is identical to equation 4 of~citet{Plougonven2009}, who identify it as a Schr\"odinger equation.
+
+
+From the work of~\citet{Hoskins1974}, it is known that in the inviscid limit, $\hat{\omega}^2 \sim f^2$. For oceanic western boundary flows, typically $N^2 \gg f^2$. This means we can make the approximation $N^2 - \hat{\omega}^2 \approx N^2$. \citet{Plougonven2009} show that this is equivalent to making the hydrostatic approximation and that, for a flow similar to the one considered here, there is a negligible effect on the solutions. After making the hydrostatic approximation, we are then left with
+\begin{equation}
+    -\frac{N^2}{m^2} \dv[2]{\hat{\psi}}{x} + f\zeta\hat{\psi} \approx \hat{\omega}^2 \hat{\psi} \, .
+    \label{eq:LSASchro}
+\end{equation}
+
+The eigenfunctions of the equation are $\hat{\psi}$. They define the horizontal structure of the overturning streamfunction. The eigenvalues of the equation are $\hat{\omega}^2$. If the eigenvalue is negative, then it is possible for $\omega$ to be imaginary. If $\omega$ is imaginary, then the overturning circulation may either grow or decay exponentially. It is useful to introduce the quantity $\sigma = \Im(\omega)$, which, if positive, corresponds to the exponential growth rate; if negative it gives the decay rate. The value of $\sigma$ is maximized for the smallest real eigenvalue of equation~\ref{eq:LSASchro}. For each eigenfunction, there exists a spectrum of vertical wave-numbers, each with a characteristic growth rate (or frequency if stable). The relationship between the growth rate and the vertical wavenumber is determined by the eigenvalue, $\hat{\omega}$.
+
+To calculate the eigenfunctions and eigenvalues of the equation, we must first specify a buoyancy frequency and velocity profile, from which vorticity can be calculated. As we are interested in western boundary currents, we will consider an idealized meridional flow: the barotropic Bickley jet. The velocity of the jet can be expressed as
+\begin{equation}
+    V(x) = V_0 \Bigg( 1 - \tanh[2](\frac{x - x_{mid}}{\delta_b})\Bigg)
+\end{equation}
+where $V_0$ is the peak velocity of the jet, $x$ is the across stream coordinate, $x_{mid}$ gives the distance of the peak velocity of the jet from the western boundary and $\delta_b$ is the width of the jet. The jet is symmetric in the along stream direction. The jet parameters are set as follows: $V_0 = 0.87$~m\,s$^{-1}$, $x_{mid} = 40$ km and $\delta_b = 30$ km. The parameters are chosen to be similar to those used in the two-dimensional and three-dimensional numerical models described in sections~\ref{sec:2DNumericalModels} and~\ref{sec:3DNumericalModels} at a depth of 200 m. These parameters are, in turn, loosely based on what is seen in the North Brazil Current~citep{Johns1998}. The velocity profile used is shown in figure~\ref{fig:BickleyJet}. In the northern hemisphere, we would expect to see symmetric instability develop in a region to the right of the jet's center. In the southern hemisphere, we may expect to see symmetric instability between the western boundary and the jet's center. In such a configuration, the western boundary would input anomalous vorticity into the flow, something that this idealized framework is unable to represent. For this reason, and the fact that this study focuses on cross-equatorial flows, we do not apply the linear stability analysis to northward flowing jets in the southern hemisphere.
+
+The buoyancy frequency is set to a value of 5$\times$10\textsuperscript{-3}~s\textsuperscript{-1}, which is the mean buoyancy frequency at a depth of between 200 m and 400 m, as estimated from 82 neutral density density profiles taken by an Argo float off the coast of Brazil between January 2016 and February 2017~citep{Argo2019}. The trajectory of the float and the mean neutral density profile are shown in figure~\ref{fig:InitialStratification}. The use of neutral density in calculating the buoyancy frequency means the results of the linear stability analysis will be more applicable to what is seen in the models presented in the following sections rather than the ocean. This is because the neutral density calculation does not reliably preserve vertical buoyancy gradients~citep{Eden1999}. Data from a single Argo float was used as it was readily available and provides a plausible estimate of the density structure of the region. The value of $f$ is set to $1.01 \times 10^{-5}$~s$^{-1}$, corresponding to a latitude of approximately 4$^\circ$N.
+
+For each eigenfunction, which physically corresponds to the horizontal structure of the overturning cell, we can plot the growth rate, $\sigma$, as a function of vertical wavenumber, $m$, and vertical viscosity, $A_r$. This is done in figure~\ref{fig:DispersionRelation}. We find that, for a given vertical viscosity, there is a value of the vertical wavenumber which maximizes the growth rate. As the growth is exponential, within a few e-folding timescales, the vertical mode which maximizes $\sigma$ will dominate the structure of the instability --- assuming non-linear effects have not taken hold before this time. Thus, although a discrete set of horizontal modes and a continuous spectrum of vertical modes may be excited, we may expect a single horizontal and vertical mode to dominate the structure of the instability. However, we can only verify this expectation with the use of a numerical model which takes into account the non-linearities neglected here.
+
+Below a maximum `critical' viscosity, there is a maximum and minimum vertical wavelength at which unstable modes exist; at higher viscosities, all modes are stable. The maximum wavelength is a result of stratification inhibiting vertical motions. Any mode with a wavelength smaller than the minimum will experience strong viscous damping, rendering the mode stable. The minimum vertical wavelength tends to zero in the inviscid limit. The maximum `critical' viscosity is found when the maximum wavelength allowed by the stratification and the minimum wavelength allowed by viscosity are equal.
+
+It is not \textit{a priori} clear whether the viscosity we are interested in should be a molecular or turbulent viscosity. If one is looking for signs of symmetric instability in a sufficiently coarse ocean model, then it is the turbulent viscosity that will set the vertical length scale. This makes sense as it is the only viscosity the fluid is `aware' of. For real fluids, matters become more problematic.~citet{Griffiths2003a} suggests that secondary Kelvin-Helmholtz instabilities form as a result of symmetric instability and play a more dominant role in the vertical scale selection than does viscosity. This means that the findings of this linear-stability analysis apply to the results of numerical models which fail to resolve these secondary instabilities, but the relation to what might be observed in meridional western boundary flows in the ocean is more ambiguous.
+
+
+For a given vertical viscosity we can also plot the two-dimensional structure of the overturning that the instability generates, as shown in figure~\ref{fig:2DStructure} for a viscosity of $4 \times 10 ^{-4}$ m$^2$\,s$^{-1}$ (this viscosity was chosen as it corresponds to the value used in the numerical models presented in sections 3 \& 4). We see that the instabilities generate a stack of alternating overturning cells. Overlain in the figure is the absolute vorticity (solid line), highlighting that the cells are stongly localized to the region of negative potential vorticity. Despite the localization, the overturning is non-zero outside of the region of negative absolute vorticity. This enables the mixing of waters with positive and negative PV, which over time will create a neutrally stable PV configuration.
+
+The mode shown in figure~\ref{fig:2DStructure} has an e-folding timescale of around 2 days. Seawater has a viscosity of $10^{-6}$ m$^{2}$\,s$^{-1}$, which would lead to overturning cells with a much smaller vertical wavelength of 15 m and a smaller e-folding time scale of approximately 1 day. That the timescale is decreased slightly when using a realistic viscosity suggests that the instability will be at least as efficient at neutralizing anomalous PV in the ocean. Differences between the vertical lengthscales seen here and in other works~citep[e.g.][]{Taylor2009} can be understood in terms of the dependence on vertical viscosity, and the artificially high ‘eddy viscosity’ used here.
+
+A more rigorous analysis of the solutions to the boundary value problem described in this section is given in~citet{Plougonven2009}, who consider barotropic zonal shear flows on an $f$-plane. On an $f$-plane there is no physical distinction between meridional and zonal flows so their findings are broadly applicable, although the vorticity profiles they use differ from those considered here. There also exists a broad literature base on linear stability analyses of symmetric and inertial instabilities on a $\beta$-plane, with a focus on zonal currents~\citep[e.g.][]{Kloosterziel2017, Ribstein2014,Griffiths2003, Hua1997}.
+
+\section{Viscous symmetric instability with the complete Coriolis force}
+
+\label{sec:DrasticSI}
+    \citet{Zeitlin2018a} states that ``symmetric instability drastically changes upon inclusion of the full Coriolis force.'' The author goes on to perform a linear stability analysis of a zonally symmetric shear flow on an $f$-plane, taking into account the non-traditional component of the full Coriolis force. They find that the growth rate and spatial structure of unstable modes may be significantly altered by inclusion of the full Coriolis force. Na\"ively, one may expect to observe drastic changes in the above numerical simulations, given that on an ordinary $f$-plane there is no difference between a meridional and zonal flow (as the system has no preferred orientation). However, the inclusion of the non-traditional component of the Coriolis force breaks this symmetry and reintroduces a natural meridional direction. To understand how symmetric instability in meridional flows changes under the complete Coriolis force, we must repeat the linear stability analysis of~\citet{Zeitlin2018a} but for the case of a meridional flow.
+
+    The Boussinesq equations of motion for a meridionally symmetric fluid on an $f$-plane, with the complete Coriolis force, and in the limit in which the horizontal length scale is much larger than the vertical length scale, are
+    \begin{subequations}
+    \begin{equation}
+        % \bigg( \pdv{t} + u \pdv{x} + w \pdv{z} \bigg)
+        \frac{Du}{Dt} - fv + F_{NT}w - \pdv{\phi}{x} = A_r \pdv[2]{z} u \, ,
+    \end{equation}
+    \begin{equation}
+        \frac{Dv}{Dt} + fu = A_r \pdv[2]{z} v \, ,
+    \end{equation}
+    \begin{equation}
+        \frac{Dw}{Dt} - F_{NT}u - \pdv{\phi}{z} - b = A_r \pdv[2]{z} w \, ,
+    \end{equation}
+    \begin{equation}
+        \pdv{u}{x} + \pdv{w}{z} = 0 \, ,
+    \end{equation}
+    and
+    \begin{equation}
+        \frac{Db}{Dt} = \kappa \pdv[2]{z} b \, .
+    \end{equation}
+    \end{subequations}
+    Here, $\phi$ is the geopotential pressure, $\kappa$ is the buoyancy diffusion coefficient and $F_{NT}$ is the non-traditional component of the Coriolis parameter.
+
+    We now consider a flow which is, initially, purely meridional, with $(u, v, w) = (0, V, 0)$, $\phi = \Phi$ and $b = B$. The flow is in geostrophic balance, hydrostatically balanced and in equilibrium. Mathematically
+    \begin{subequations}
+    \begin{equation}
+        f V = \pdv{\Phi}{x} \, ,
+    \end{equation}
+    \begin{equation}
+        B = \pdv{\Phi}{z} \, ,
+    \end{equation}
+    \begin{equation}
+        \pdv[2]{V}{z} = 0 \, ,
+    \end{equation}
+    and
+    \begin{equation}
+        \pdv[2]{B}{z} = 0 \, .
+    \end{equation}
+    \end{subequations}
+    We can then perturb this balanced flow, giving perturbed variables $(u, v, w) = (u', V + v', w')$, $\phi = \Phi + \phi'$ and $b = B + b'$. Substituting these values into the equations of motion and considering terms only of linear order or lower in the perturbed variables, we find that
+    \begin{subequations}
+    \begin{equation}
+        \label{eq:ZonalMomentum}
+        % geostrophic balance
+        \pdv{u'}{t'} + F_{NT}w' - fv' + \pdv{\phi '}{x} = 0 \, ,
+    \end{equation}
+    \begin{equation}
+        \pdv{v'}{t'} + u' \pdv{V}{x} + w' \pdv{V}{z} + fu' = 0 \, ,
+    \end{equation}
+    \begin{equation}
+        \label{eq:VerticalMomentum}
+        % Hydrostatic balance
+        \pdv{w'}{t'} + \pdv{\phi '}{z} - b' - F_{NT}u' = 0 \, ,
+    \end{equation}
+    \begin{equation}
+        \pdv{b'}{t} - \kappa \pdv[2]{b'}{z} + w' \pdv{B}{z} + u' \pdv{B}{x} = 0 \, ,
+    \end{equation}
+    and
+    \begin{equation}
+        \label{eq:Continuity}
+        \pdv{u'}{x} + \pdv{w'}{z} = 0 \, ,
+    \end{equation}
+    \end{subequations}
+    where the operator $\flatfrac{\partial}{\partial t'}$ is defined as
+    \begin{equation}
+        \pdv{t'} = \pdv{t} - A_r \pdv[2]{z} \, .
+    \end{equation}
+    
+    From equation~(\ref{eq:Continuity}) we see that, as in the linear stability analysis (section~\ref{sec:LinearStabilityAnalysis}), we can write $u'$ and $w'$ in terms of an overturning streamfunction $\psi$, where $u' = - \partial_z \psi$ and $w' = \partial_x \psi$. We now obtain an equation of motion for the overturning streamfunction. The first step is to differentiate the horizontal and vertical momentum equations (equations~\ref{eq:ZonalMomentum} and~\ref{eq:VerticalMomentum}) with respect to the vertical and zonal coordinates respectively. Subtracting the two equations gives
+    \begin{equation}
+        -\pdv{t'} \bigg( \pdv[2]{x} + \pdv[2]{z} \bigg) \psi - f \pdv{v'}{z} + \pdv{b'}{x} + F_{NT} \bigg( \pdv{u'}{x} + \pdv{w'}{z} \bigg) = 0 \, .
+    \end{equation}
+    The last term on the left hand side is the only term containing an explicit dependence on $F_{NT}$, and we know from equation~(\ref{eq:Continuity}) that it is equal to zero. The only other way the equation of motion for the streamfunction could gain a dependence on $F_{NT}$ is through the evolution of $v'$ or $b'$. $b'$ is a function of the streamfunction and the initial buoyancy field and $v'$ depends on the streamfunction and the initial meridional velocity profile. Thus, the overturning driving the redistribution of PV evolves in exactly the same manner regardless of whether there is rotation about the meridional axis or not.
+
+    The PV itself is also independent of the complete Coriolis force for a meridionally symmetric flow. This can be seen by explicitly evaluating equation~(\ref{eq:PVDefinition}), giving
+    \begin{equation}
+        Q = \bigg( f + \pdv{v}{x} \bigg) \pdv{b}{z} - \pdv{v}{z} \pdv{b}{x} \, .
+    \end{equation}
+    From equation~(\ref{eq:PVEvolution}) we can see that as both the streamfunction and PV are independent of $F_{NT}$, the evolution of the symmetric instability will not depend on it either. This finding is not in any way contradictory to the findings of~citet{Zeitlin2018a}. The difference arises due to the asymmetry between the purely meridional flow considered here and the zonal flow considered in the aforementioned study.
+
+    It is, in fact, possible to make a more general statement about the types of forces which leave the overturning unchanged. We can modify the momentum equations (\ref{eq:ZonalMomentum} and~\ref{eq:VerticalMomentum}) with the addition of any irrotational force acting in the $xz$-plane and which satisfies the relationship
+    \begin{equation}
+        \pdv{\mathcal{F}_x}{z} + \pdv{\mathcal{F}_z}{x} = 0 \, ,
+    \end{equation}
+    where $\mathcal{F}_x$ and $\mathcal{F}_z$ are the zonal and meridional components of the force respectively. This can be understood in the context of~citet{Marshall2011} as follows --- an irrotational force is divergent and so will project on to the pressure gradient terms of the momentum equation. A rotational force is non-divergent and so projects entirely onto the acceleration term. An irrotational (divergent) force is not able to alter the acceleration term. In the system described above, the inclusion of the complete Coriolis force may alter the pressure field but not the motions within the $xz$-plane due to its irrotational nature.
+
+    Although the crossing of the equator is a meridional phenomenon, western boundary currents, such as the North Brazil Current, will be oriented at some angle to a meridian, having both zonal and meridional components of velocity. In the zonal limit, symmetric instability can change drastically with the inclusion of the full Coriolis force, whereas in the meridional limit there is no change at all. For a realistic (not purely meridional) western boundary current crossing the equator, the structure of symmetric instability may therefore have some dependence on the complete Coriolis force.
+    
+
+    % This bit may need to be gotten rid of...
+    The relative importance of non-traditional effects depends on the direction of the current relative to the meridional direction. For a current oriented at an angle $\theta$ to the meridional direction, the findings of~citet{Zeitlin2018a} apply but with the value of $F_{NT}$ scaling with $\sin \theta$. citet{Zeitlin2018a} defines a ``non-traditionality'' parameter and using the findings of our work we can generalise it to flows with a meridional component giving
+    \begin{equation}
+        \gamma = \frac{\cot\phi\,\sin \theta\,H}{L}
+    \end{equation}
+    where $\gamma$ is the  ``non-traditionality parameter'' and $\phi$ is the latitude. Non-traditional effects are important when $\gamma \sim 1$. Close to the equator, the coast of Brazil forms an angle of $\theta \sim 60^\circ$ to the meridian. Using this value of $\theta$ along with $\phi = 4^\circ$N, $H = 100$ m and $L = 30$ km gives $\gamma = 0.04$, suggesting that non-traditional effects are unlikely to be hugely important off the coast of Brazil.
