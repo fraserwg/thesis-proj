@@ -4,7 +4,7 @@
 %and uncomment the next line)
 %\include{mymacros}
 \usepackage{numprint}
-
+\usepackage[hidelinks]{hyperref}
 
 \title{Symmetric instability in the
         Atlantic Meridional Overturning Circulation}   %note \\[1ex] is a line break in the title
@@ -32,6 +32,9 @@
 %now include the files of latex for each of the chapters etc
 \include{chapter1}
 \include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
 \include{conclusions}
 
 %now enable appendix numbering format and include any appendices
@@ -43,7 +46,7 @@
 %\addcontentsline{toc}{chapter}{Bibliography}
 %uncomment next line to change bibliography name to references
 %\renewcommand{\bibname}{References}
-%\bibliography{refs}        %use a bibtex bibliography file refs.bib
-%\bibliographystyle{plain}  %use the plain bibliography style
+\bibliography{library}        %use a bibtex bibliography file refs.bib
+\bibliographystyle{agsmdoi}  %use the plain bibliography style
 
 \end{document}

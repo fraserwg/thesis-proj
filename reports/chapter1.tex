@@ -30,6 +30,7 @@ Symmetric instability is a type of submesoscale instability that generates overt
 
 Symmetric instability is intimately linked to the scaler quantity, Ertel potential vorticity. In the ocean this is defined as
 \begin{equation}
+    \label{eq:PVDefinition}
     Q = (\mathbf{f} + \curl{\mathbf{u}})\cdot\grad b    
 \end{equation}
 where $\mathbf{f}$ is the planetary vorticity vector, $\mathbf{u}$ is the velocity field in the rotating frame of reference, and $b = -  g \flatfrac{\rho}{\rho_0}$ is the buoyancy field. $g$ is gravitational acceleration and $\rho_0$ is a constant reference density. One can interpret the potential vorticity as either the component of absolute vorticity normal to isopycnal surfaces and scaled by the isopycnal thickness, or the stratification along a vortex tube and scaled by the absolute vorticity of the vortex, with the former being the most common way of understanding the quantity.
@@ -38,7 +39,7 @@ In a fluid subjected to no momentum or buoyancy forcing, potential vorticity is 
 \begin{equation}
     \frac{DQ}{Dt} = 0 \, .
 \end{equation}
-This means if we follow an individual fluid parcel around we expect its potential vorticity to remain constant. This is a fundamental material invariant which arises from particle relabelling symmetries in the Lagrangian formulation of the equations of an IDEAL fluid.
+This means if we follow an individual fluid parcel around we expect its potential vorticity to remain constant. This is a fundamental material invariant which arises from a particle relabelling symmetry on isopycnal surfaces in an inviscid fluid~\citep{Salmon1998}.
 
 If a fluid is subject to external or dissipative momentum and buoyancy forcings the conservation of potential vorticity  becomes
 \begin{equation}

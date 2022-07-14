@@ -18,26 +18,27 @@
 
 \RequirePackage{graphicx} % needed for latest frontpage logo
 \RequirePackage{ifthen}   % needed for option parsing for logo
-\RequirePackage{paratype}
-\RequirePackage{euler}
 \RequirePackage{fontenc}
 \RequirePackage{watermark}
 \RequirePackage{geometry}
 \RequirePackage{tocloft}
 \RequirePackage{caption}
 \RequirePackage{titlesec}
-\RequirePackage{amssymb}
-\RequirePackage{amsmath}
-%\RequirePackage{unicode-math}
+%\RequirePackage{amssymb}
+%\RequirePackage{amsmath}
+\RequirePackage{euler}
 \RequirePackage{physics}
+%\RequirePackage{unicode-math}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{paratype}
 \RequirePackage{setspace}
-\RequirePackage{titlesec}
 \RequirePackage{natbib}
+\RequirePackage[hidelinks]{hyperref}
 %\RequirePackage{subfigures}
 
 \doublespacing
+\captionsetup[table]{font=doublespacing}     %% change 1.2 as you like
+\captionsetup[figure]{font=doublespacing}  
 
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
@@ -52,7 +53,7 @@
 
 % Format captions
 \DeclareCaptionFont{captionlabel}{\usefont{T1}{PTSansCaption-TLF}{b}{n}}
-\DeclareCaptionFont{captiontext}{\usefont{T1}{PTSansCaption-TLF}{m}{n}}
+\DeclareCaptionFont{captiontext}{\usefont{T1}{PTSerif-TLF}{m}{n}}
 \captionsetup{labelfont=captionlabel, textfont=captiontext}
 
 % Format toc and lof
@@ -64,16 +65,16 @@
 \renewcommand{\cftsubsecfont}{\usefont{T1}{PTSans-TLF}{m}{it}}
 \renewcommand{\cftsubsubsecfont}{\usefont{T1}{PTSansNarrow-TLF}{m}{n}}
 
-\renewcommand{\cftchappagefont}{\usefont{T1}{PTSans-TLF}{n}{n}}
+\renewcommand{\cftchappagefont}{\usefont{T1}{PTSans-TLF}{m}{n}}
 \renewcommand{\cftsecpagefont}{\usefont{T1}{PTSans-TLF}{m}{n}}
 \renewcommand{\cftsubsecpagefont}{\usefont{T1}{PTSans-TLF}{m}{n}}
 \renewcommand{\cftsubsubsecpagefont}{\usefont{T1}{PTSans-TLF}{m}{n}}
 
-\renewcommand{\cftfigpagefont}{\usefont{T1}{PTSans-TLF}{n}{n}}
+\renewcommand{\cftfigpagefont}{\usefont{T1}{PTSans-TLF}{m}{n}}
 \renewcommand{\cftfigfont}{\usefont{T1}{PTSans-TLF}{m}{n}}
 %\renewcommand{\cftsubfigfont}{\usefont{T1}{PTSans-TLF}{m}{it}}
 
-\renewcommand{\cfttabpagefont}{\usefont{T1}{PTSans-TLF}{n}{n}}
+\renewcommand{\cfttabpagefont}{\usefont{T1}{PTSans-TLF}{m}{n}}
 \renewcommand{\cfttabfont}{\usefont{T1}{PTSans-TLF}{m}{n}}
 %\renewcommand{\cftsubtabfont}{\usefont{T1}{PTSans-TLF}{m}{it}}
 
@@ -84,7 +85,7 @@
 
 %define the default submitted text
 \newcommand{\submittedtext}{{A thesis submitted for the degree of}}
-
+\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi: #1}}
 %
 % DECLARATIONS
 %
@@ -134,7 +135,7 @@
 {
 % Latest Logo, Square version (the default!)
 % you need an oxlogo.eps or oxlogo.pdf file as appropriate
-\def\logo{{\includegraphics[width=7cm]{ox_brand_cmyk_pos_rect}}}
+\def\logo{{\includegraphics[width=7cm]{oxford_logo}}}
 }{}
 
 %
@@ -163,7 +164,7 @@
 
 %define title page layout
 \renewcommand{\maketitle}{%
-\thiswatermark{\centering \put(-50pt,-880pt){\includegraphics[scale=1]{Cover.png}} }
+\thiswatermark{\centering \put(-50pt,-880pt){\includegraphics[scale=1]{../figures/Cover.png}} }
 
 \begin{alwayssingle}
     \newgeometry{hmargin={3cm, 8cm}, vmargin={0pt,0pt}}
@@ -172,19 +173,19 @@
     \thispagestyle{empty}
   \begin{flushleft}
   \vspace*{10mm}
-    {\fontfamily{PTSans-TLF}\selectfont \Huge {{\@title}} \par}
+    {\usefont{T1}{PTSans-TLF}{m}{n} \Huge {{\@title}} \par}
 {\large \vspace*{10mm} }
-    {{\Large {\fontfamily{PTSansNarrow-TLF}\selectfont \@author}} \par}
+    {{\Large {\usefont{T1}{PTSansNarrow-TLF}{m}{n} \@author}} \par}
 {\large \vspace*{1ex}
-    {{\fontfamily{PTSansNarrow-TLF}\selectfont \@college} \par}
+    {{\usefont{T1}{PTSansNarrow-TLF}{m}{n} \@college} \par}
 \vspace*{0.5ex}
-    {\fontfamily{PTSansNarrow-TLF}\selectfont University of Oxford \par}
+    {\usefont{T1}{PTSansNarrow-TLF}{m}{n} University of Oxford \par}
 \vspace*{100mm}
-    {{\fontfamily{PTSansNarrow-TLF}\selectfont \submittedtext} \par}
+    {{\usefont{T1}{PTSansNarrow-TLF}{m}{n} \submittedtext} \par}
 \vspace*{1ex}
     {\usefont{T1}{PTSansNarrow-TLF}{m}{sl} \@degree \par}
 \vspace*{1ex}
-    {\fontfamily{PTSansNarrow-TLF}\selectfont \@degreedate} \par} \vspace*{10mm}
+    {\usefont{T1}{PTSansNarrow-TLF}{m}{n} \@degreedate} \par} \vspace*{10mm}
     {\logo \par}
   \end{flushleft}
   \null\vfill
