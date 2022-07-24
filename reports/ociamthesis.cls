@@ -44,12 +44,12 @@
 \setcounter{tocdepth}{3}
 
 % Format section headings
-
+\renewcommand{\listfigurename}{List of figures} 
 \titleformat{\chapter}[display]{\Huge \usefont{T1}{PTSans-TLF}{m}{n}}{Chapter \ \thechapter}{0.5ex}{}[]
 \titleformat{\section}[hang]{\Large \usefont{T1}{PTSans-TLF}{m}{n}}{\thesection}{0.5em}{}[]
 \titleformat{\subsection}[hang]{\large \usefont{T1}{PTSans-TLF}{m}{it}}{\thesubsection}{0.5em}{}[]
-\titleformat{\subsubsection}[hang]{\usefont{T1}{PTSansNarrow-TLF}{m}{n}}{\thesubsubsection}{0.5em}{}[]
-\titleformat{\paragraph}[runin]{\usefont{T1}{PTSansNarrow-TLF}{m}{sl}}{}{0.5em}{}[]
+\titleformat{\subsubsection}[hang]{\usefont{T1}{PTSans-TLF}{m}{n}}{\thesubsubsection}{0.5em}{}[]
+\titleformat{\paragraph}[runin]{\usefont{T1}{PTSans-TLF}{m}{sl}}{}{0.5em}{}[]
 
 % Format captions
 \DeclareCaptionFont{captionlabel}{\usefont{T1}{PTSansCaption-TLF}{b}{n}}

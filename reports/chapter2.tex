@@ -3,7 +3,7 @@
     \textit{In real life there is no algebra} --- Audrey Horne
 \end{quote}
 
-This chapter examines symmetric instability and its sub-classifications through several linear instability analyses. This work builds extensively on sections of~citep{Goldsworth2021}. Sections XXXXXX are new.
+In this chapter we will explore the theory behind symmetric instability and its sub-classificaitons. We will start by considering the classical problem of the stability of an inviscid, symmetric, parallel shear flow and then build on this framework to explore different linear stability problems, and how they apply to real-world currents.
 
 \section{Inviscid symmetric instability of parallel shear flow}
 \label{sec:InviscidInstabilities}
@@ -80,10 +80,11 @@ Here, $u$, $v$ \& $w$ are the zonal, meridional \& vertical components of veloci
     \label{eq:OriginalHoskins}
     \pdv[2]{}{t} \bigg(\pdv[2]{}{x} + \pdv[2]{}{z}\bigg) \psi + \bigg( N^2 \pdv[2]{}{x} - 2 f \pdv{V}{z} \pdv[2]{}{x}{z} + f \zeta \pdv[2]{}{z} \bigg) \psi = 0 \, .
     \end{equation}
-    This equation describes how overturning motions develop within a parallel shear flow, and their dependence on the background flow and its stratification. The equation forms the starting point of~\citet{Hoskins1974} and can be used to derive many interesting results relating to symmetric instability~\citep[see also][]{Ooyama1966}.
+    This equation is the Hoskins-Ooyama equation \citep{Hoskins1974, Ooyama1966} and it describes how overturning motions develop within a parallel shear flow, and their dependence on the background flow and its stratification.
     
     \subsection{The instability criterion}
-    In order to derive an instability criterion, \citet{Hoskins1974} uses a trial solution to equation~\ref{eq:OriginalHoskins} of the form $\psi = e^{i k(x\sin\phi + z\cos \phi) + \omega t}$, where $\omega$ is the oscillatory frequency of the perturbations, $k$ the wavenumber, and $\phi$ the angle the perturbation makes with the horizontal. Substituting this into equation~\ref{eq:OriginalHoskins} we find that
+    \label{subsec:InstabilityCriterion}
+    To examine the stability of solutions to equation~\ref{eq:OriginalHoskins}, \citet{Hoskins1974} proposes a trial soltuion of the form $\psi = e^{i k(x\sin\phi + z\cos \phi) + i \omega t}$, where $\omega$ is the oscillatory frequency of the perturbations, $k$ the wavenumber, and $\phi$ the angle the perturbation makes with the horizontal. Substituting this into equation~\ref{eq:OriginalHoskins} we find that
     \begin{equation}
         \label{eq:GrowthRate}
         \omega^2 = \cos^2\phi (N^2 \tau^2 - 2f\partial_zV\tau + f\zeta) \, ,
@@ -142,7 +143,7 @@ Here, $u$, $v$ \& $w$ are the zonal, meridional \& vertical components of veloci
     \subsection{The classical and energetic definitions of symmetric instability}
     In the above (and in what follows), we have been referring to the overturning instability that occurs when the potential vorticity of a flow has the opposite sign to the planetary vorticity. We refer to this as the \textit{classical} definition of symmetric instability, as proposed by~\citet{Hoskins1974}. Under this definition, gravitational and inertial instability are both special cases of symmetric instability. 
     
-    This isn't, however, the only definition of symmetric instability. \citet{Thomas2013} propose a more fine-grained approach to the taxonomy of these instabilities, in which they can be distinguished by their energy source and the source of their anomalous potential vorticity. They define symmetric instability as getting its energy from the geostrophic shear of the mean flow, inertial instability as getting its energy from the lateral shear of the mean flow and gravitatational instability as getting its energy from buoyancy fluxes. Under these definitions we can have any of pure inertial, hybrid inertial symmetric, pure symmetric, hybrid symmetric gravitational, and pure gravitational instabilities. We refer to this as the \textit{energetic} defintion of symmetric instabilities.
+    This isn't, however, the only definition of symmetric instability. \citet{Thomas2013} propose a fine-grained taxonomic system, in which diiferent instabilities can be distinguished by their energy source and the source of their anomalous potential vorticity. They define symmetric instability as getting its energy from the geostrophic shear of the mean flow, inertial instability as getting its energy from the lateral shear of the mean flow and gravitatational instability as getting its energy from buoyancy fluxes. Under these definitions we can have any of pure inertial, hybrid inertial symmetric, pure symmetric, hybrid symmetric gravitational, and pure gravitational instabilities. We refer to this as the \textit{energetic} defintion of symmetric instabilities.
 
     For the purposes of this work we adopt the classical definition. This is a purely aesthetic choice --- we enjoy the simplicity of the definition and how it preserves the link between symmetric instability, pure gravitational and pure inertial instabilities, potential vorticity, and the extraction of turbulent kinetic energy from along isopycnal shear.
 
@@ -218,6 +219,7 @@ The eigenvalues and eigenfunctions of this equation have the same physical signi
 
 
 \subsection{Application to the North Brazil Current and its rings}
+\label{subsec:NBClsa}
 We will now consider a parallel shear flow similar to the North Brazil Current and an axisymmetric flow similar to the North Brazil Current rings. We will solve equations~\ref{eq:FullSchrodinger} and~\ref{eq:BuckinghamSchrodinger} for these flows and examine the structure and growth rate of the overturning cells which are generated by the inertial and centrifugal instabilities.
 
 For the North Brazil Current, we will assume the flow looks something like a Bickley jet, with the meridional velocity of the mean state given by
@@ -234,19 +236,18 @@ We will use the Rankine vortex model to represent the North Brazil Current rings
         \flatfrac{V_0 R_0}{r} \, , r \geq R_0
     \end{cases}
 \end{equation}
-where $V_0$ is the velocity at the eddy's core-shell interface and $R_0$ is the radius of the core. In both models we will use $V_0 = 1$ m$\,$s$^{-1}$, and we will use $x_{mid} = 40$ km, $\delta_b = 30$ km and $R_0 = 40$ km. These values are chosen based on the observations of~\citet{Johns1998} and~\citet{Castelao2011}. The velocity profiles are shown in figure~\ref{fig:InitialVelocity}. The background stratification is set to $N^2 = 2.5 \times 10^{-5}$ s$^{-1}$, which is the mean buoyancy frequency at a depth of between 200 m and 400 m, as estimated from 82 neutral density density profiles taken by an Argo float off the coast of Brazil between January 2016 and February 2017~\citep{Argo2019}. The trajectory of the float and the mean neutral density profile are shown in figure~\ref{fig:InitialStratification}. The use of neutral density in calculating the buoyancy frequency means the results of the linear stability analysis will be more applicable to what is seen in models presented in the following sections rather than the ocean. This is because the neutral density calculation does not reliably preserve vertical buoyancy gradients~\citep{Eden1999}. Data from a single Argo float was used as it was readily available and provides a plausible estimate of the density structure of the region.
+where $V_0$ is the velocity at the eddy's core-shell interface and $R_0$ is the radius of the core. For the Bickley jet we will use $V_0 = 1$ m$\,$s$^{-1}$, and for the Rankine vortex we will use $V_0 = - 1$ m$\,$s$^{-1}$. We will set $x_{mid} = 40$ km, $\delta_b = 30$ km and $R_0 = 100$ km. These values are chosen based on the observations of~\citet{Johns1998} and~\citet{Castelao2011}. The velocity profiles are shown in figure~\ref{fig:InitialVelocity}. The background stratification is set to $N^2 = 2.5 \times 10^{-5}$ s$^{-2}$, which is the mean buoyancy frequency at a depth of between 200 m and 400 m, as estimated from 82 neutral density density profiles taken by an Argo float off the coast of Brazil between January 2016 and February 2017~\citep{Argo2019}. The trajectory of the float and the mean neutral density profile are shown in figure~\ref{fig:InitialStratification}. The use of neutral density in calculating the buoyancy frequency means the results of the linear stability analysis will be more applicable to what is seen in models presented in the following sections rather than the ocean. This is because the neutral density calculation does not reliably preserve vertical buoyancy gradients~\citep{Eden1999}. Data from a single Argo float was used as it was readily available and provides a plausible estimate of the density structure of the region.
 \begin{figure}
     \centering
     \includegraphics[]{../figures/lsa_velocity.pdf}
     \caption{Velocity profiles of the Bickley jet and Rankine vortex used in the linear stability analyses.}
     \label{fig:InitialVelocity}
-
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[]{../figures/argo_trajectory.pdf}
-    \caption{Trajectory of Argo profile (a) and mean neutral density along the profile used to calculate $N^2$.}
+    \caption{Trajectory of Argo profile (a) and mean neutral density along the profile used to calculate $N^2$ (b).}
     \label{fig:InitialStratification}
 \end{figure}
 
@@ -256,7 +257,7 @@ We will first consider the properties of the eigenvalues and eigenfunctions of e
 \begin{figure}
     \centering
     \includegraphics[]{../figures/vertical_scale_selection.pdf}
-    \caption{Growth rates of inertial (a) and centrifugal (b) instabilities as a function of vertical wavelength of the mode and the viscosity used.}
+    \caption{Dispersion relations of (a) inertial instability of a Bickley jet and (b) centrifugal instability of a Rankine vortex as a function of vertical wavelength of the mode and viscosity.}
     \label{fig:DispersionRelation}
 \end{figure}
 
@@ -266,44 +267,52 @@ We see in figure~\ref{fig:DispersionRelation} that for a given viscosity, there 
 
 Below a maximum `critical' viscosity, there is a maximum and minimum vertical wavelength at which unstable modes exist; at higher viscosities, all modes are stable. The maximum wavelength is a result of stratification inhibiting vertical motions. Any mode with a wavelength smaller than the minimum will experience strong viscous damping, rendering the mode stable. The minimum vertical wavelength tends to zero in the inviscid limit. The maximum `critical' viscosity is found when the maximum wavelength allowed by the stratification and the minimum wavelength allowed by viscosity are equal --- i.e. it is related to the Ozimov scale.
 
-We see in figure~\ref{fig:DispersionRelation}b that the range of unstable modes is much more limited for the anticyclonic Rankine vortex than for the Bickley jet shown in figure~\ref{fig:DispersionRelation}a. The growth rate is also much smaller for the case of the centrifugal instability. This clearly shows the stabilising effect of anticyclonic rotation on the development of symmetric instability.
+We see in figure~\ref{fig:DispersionRelation}b that the range of unstable modes is slightly more limited for the anticyclonic Rankine vortex than for the Bickley jet shown in figure~\ref{fig:DispersionRelation}a. The growth rate is also smaller for the case of the centrifugal centrifugal instability.
 
 It is not \textit{a priori} clear whether the viscosity which sets properties of the instabilities is a molecular or turbulent viscosity. If one is looking for signs of symmetric instability in a sufficiently coarse ocean model, then it is the turbulent viscosity that will set the vertical length scale. This makes sense as it is the only mixing process the fluid is `aware' of. For real fluids, matters become less clear. \citet{Griffiths2003a} shows that secondary Kelvin-Helmholtz instabilities form as a result of symmetric instability and play a more dominant role in the vertical scale selection than does viscosity. We suggest that when thinking about the properties of symmetric instabilities in the real ocean, it will not be the molecular viscosity which matters but the turbulent viscosity. Secondary Kelvin-Helmholtz processes are more efficient at generating mixing on a molecular scale than symmetric instability and so the rate at which anomalous potential vorticity is removed will depend on their strength as opposed to the strength of the molecular mixing generated directly by the excitement of symmetric instability.
 
-For a given vertical viscosity we can also plot the two-dimensional structure of the overturning that the instability generates, as shown in figure~\ref{fig:2DStructure}. For the inertial instability we have used a viscosity of $4 \times 10 ^{-4}$~m$^2$\,s$^{-1}$, which corresponds to a typical turbulent viscosity used in hihg-resolution idealised models that do not resolve Kelvin-Helmholtz instabilities. There are no unstable centrifugal modes at this viscosity, so instead a viscosity of $4 \times 10 ^{-5}$~m$^2$\,s$^{-1}$ is used. For the inertial mode the e-folding time scale is 1.4 days and the wavelength 110 m, whereas for the centrifugal mode the timescale is 13 days and wavelength 38 m. We see that both instabilities generate a stack of alternating overturning cells. Overlain in the figure is the absolute vorticity (solid line), highlighting that in the case of inertial instability the cells are stongly localized to the region of negative potential vorticity. Despite the localization, the overturning is non-zero outside of the region of negative absolute vorticity. This enables the mixing of waters with positive and negative PV, which over time will create a neutrally stable PV configuration.
+For a given vertical viscosity we can also plot the two-dimensional structure of the overturning that the instability generates, as shown in figure~\ref{fig:2DStructure}. We use a viscosity of $4 \times 10 ^{-4}$~m$^2$\,s$^{-1}$, which corresponds to a typical turbulent viscosity used in hihg-resolution idealised models that do not resolve Kelvin-Helmholtz instabilities. For the inertial mode the e-folding time scale is 1.4 days and the wavelength 110 m, whereas for the centrifugal mode the timescale is 3.0 days and the wavelength is 97 m. We see that both instabilities generate a stack of alternating overturning cells. Overlain in the figure is the absolute vorticity (solid line), highlighting that in the case of inertial instability the cells are stongly localized to the region of negative potential vorticity. Despite the localization, the overturning is non-zero outside of the region of negative absolute vorticity. This enables the mixing of waters with positive and negative PV, which over time will create a neutrally stable PV configuration.
 
-In the case of the centrifugal instability, we see that despite its negative potential vorticity, most of the eddy core is stable and the overturning occurs mainly near the interface between the inner core and outer shell. We also observe that instead of a single stack of overturning cells, we get a double stack, with a region of large shear between the overturning extrema. This acts to mix waters from both within and outside the eddy core, eventually leading to marginally stable potential vorticity configuration within the flow.
+In the case of the centrifugal instability, we see that despite its negative potential vorticity, most of the eddy core is stable and the overturning occurs mainly at the interface between the inner core and outer shell. This acts to mix waters from both within and outside the eddy core, eventually leading to marginally stable potential vorticity configuration within the flow. It will take some time for waters within the core to be entrained by the instability, meaning the negative potential vorticity within the eddy core may persist for some time.
 
 \begin{figure}
     \centering
     \includegraphics{../figures/overturning_structure.pdf}
-    \caption{Overturning}
+    \caption{Overturning streamfunctions generated by (a) inertial instability of a Bickley jet and (b) centrifugal instability of Rankine vortex. Overlain is the absolute vorticity of the flows.}
     \label{fig:2DStructure}
 \end{figure}
 
-Seawater has a viscosity of $10^{-6}$ m$^{2}$\,s$^{-1}$, which puts a lower limit on both the vertical wavelenght and the growth rate of both inertial and centrifugal instabilities at this latitude. For inertial instability this would give an e-folding timescale of 23 hours and wavelength of 15 m, and for centrifugal instability an e-folding timescale of 4.0 days and a wavelength of 13 m. 
+Seawater has a viscosity of $10^{-6}$ m$^{2}$\,s$^{-1}$, which puts a lower limit on both the vertical wavelenght and the growth rate of both inertial and centrifugal instabilities at this latitude. For inertial instability this would give an e-folding timescale of 23 hours and wavelength of 15 m, and for centrifugal instability an e-folding timescale of 1.3 days and a wavelength of 10 m. 
 
 A more rigorous analysis of the solutions to the inertial instability problem described in this section is given in \citet{Plougonven2009}, who consider barotropic zonal shear flows on an $f$-plane. On an $f$-plane there is no physical distinction between meridional and zonal flows so their findings are broadly applicable, although the vorticity profiles they use differ from those considered here. There also exists a broad literature base on linear stability analyses of symmetric and inertial instabilities on a $\beta$-plane, with a focus on zonal currents~\citep[e.g.][]{Kloosterziel2017, Ribstein2014,Griffiths2003, Hua1997}.
 
 \subsubsection{Instability at varying latitudes}
-We have seen in the above how viscosity, stratification and eddying motions can act to stabilise the excitement of symmetric instability. We will now look at how the growth rates of inertial and centrifigal instability vary as a function of latitude. To do this we will solve the boundary problem above whilst varying $f$, and setting the viscosity to either $10^{-5}$~m$^{2}\,$s$^{-1}$ or $4 \times 10^{-4}$~m$^{2}\,$s$^{-1}$. The former viscosity is chosen as it is an `educated guess' of the turbulent viscosity of Kelvin-Helmholtz instabilities in the ocean, and the latter as it corresponds to the viscosity used in the numerical models we will present in subsequent chapters.
+We have seen in the above how viscosity, stratification and eddying motions can act to stabilise the excitement of symmetric instability. We will now look at how the growth rates of inertial and centrifigal instability vary as a function of latitude. To do this we will solve the boundary problem above whilst varying $f$, and setting the viscosity to either $10^{-6}$~m$^{2}\,$s$^{-1}$ or $4 \times 10^{-4}$~m$^{2}\,$s$^{-1}$. The former viscosity is chosen as it places an upper limit on the growth rate of the instabilities as a function of latitude, and the latter as it corresponds to the viscosity used in the numerical models we will present in subsequent chapters.
 
-Figure~\ref{fig:SigmaAndLat} shows how the maximum growth rate of inertial and symmetric instability vary as a function of latitude at the two different viscosities. We see that for the case of inertial instability of the Bickley jet, the growth rate peaks some distance north of the equator before falling again, with no unstable modes existing north of some critical latitude. For centrifugal instability in the Rankine vortex, there exist latitudes just north of the equator in both the low and high viscosity cases where no unstable modes exist. In the low viscosity case, we then see a set of unstable modes north of here where the growth rate is much lower than for the parallel shear flow. In the high viscosity case, there exist no unstable centrifugal modes until around 18$^\circ$N, meaning in models, anticyclonic eddies can propogate very far north before becoming unstable.
+Figure~\ref{fig:SigmaAndLat} shows how the maximum growth rate of inertial and symmetric instability vary as a function of latitude at the two different viscosities. We see that for both inertial and centrifugal instabilities, at both the high and low viscosity that the growth rate varies approximately parabolically with latitude, with the growth rate peaking some distance north of the equator. The velocity profiles are unstable close to the equator, however, when we get far enough away from it, planetary vorticity starts to overwhelm the relative vorticity of the flows and so the unstable modes disappear. The centrifugal instability has a lower growth rate than the inertial instability at all latitudes, suggesting that not only are anticyclonic eddies able to maintain reserves of negative potential vorticity in their core, but that the instability will spread more slowly than for a parallel shear flow.
 
-The linear stability analysis helps explain the findings of~\citet{Castelao2011} who observe zero vorticity in North Brazil Current rings as far north as $11^\circ$N. One may expect these rings to have become symmetrically unstable much closer to the equator than this and for the marginally stable potential vorticity to have been modified by other processes by the time they reach this latitude, however, the above analysis suggests that the growth rate of the instability only rises to an appreciable value close to this latitude.
+This linear stability analysis helps explain the findings of~\citet{Castelao2011} who observe zero vorticity in North Brazil Current rings as far north as $11^\circ$N. One may expect these rings to have become symmetrically unstable much closer to the equator than this and for the marginally stable potential vorticity to have been modified by other processes by the time they reach this latitude. The above analysis, however, suggests that the growth rate of the centrifugal instability is slower than that of inertial instability and that it will take a while for the instability to spread to the rings' cores given that the unstable overturning is strongest at the interface between the inner core and outer shell of the eddies.
 
 \begin{figure}
     \centering
     \includegraphics{../figures/sigma_lat.pdf}
-    \caption{Growth rate as a function of latitude }
+    \caption{Growth rates of inertial (solid line) and centrifugal (dot-dashed line) instabilities as a function of latitude for (a) a low viscosity and (b) a high viscosity.}
     \label{fig:SigmaAndLat}
 \end{figure}
 
 \subsection{Application to the Deep Western Boundary Current}
-Check capitalisation of DWBC
+We will now apply the linear stability analysis to a parallel shear flow with parameters similar to the Deep Western Boundary Current, close to the equator. We will use the Bickley jet model with $V_0 = 0.2$~m$\,$s$^{-1}$, $x_mid = 60$~km and $\delta_b = 30$~km. We will set $f = 1.91 \times 10^{-6}$~s$^{-1}$ which corresponds to a latitude of approximately $0.75^\circ$N and $N^2 = 1 \times 10^{-6}$~s$^{-2}$ which is a typical value for the deep ocean close to the equator. We choose the $f$ of a lower latitude than before, as we suspect the slower advective time-scale of the Deep Western Boundary Current will mean we see the instability occur closer to the equator than in the surface currents.
+\begin{figure}
+    \centering
+    \includegraphics{../figures/dwbc_lsa.pdf}
+    \caption{(a) the dispersion relation, and (b) the growth rate of inertial instability as a function of latitude, for the Deep Western Boundary Current.}
+    \label{fig:lsaDWBC}
+\end{figure}
+The dispersion relation for the Deep Western Boundary Current is shown in figure~\ref{fig:lsaDWBC}a and tells much the same story as the dispersion relation for the North Brazil Current. Note however that for a viscosity of $4 \times 10^{-4}$~m$^2\,$s$^{-1}$ the time scale of the instability is much smaller, at 11 days, and that the size of the overturning cells is much larger at 180 m. For a viscosity of $10^{-6}$~m$^2\,$s$^{-1}$ the time scale is 5 days and the wavelength 26 m. The increased vertical length scales can be understood as the reduced stratification meaning the vertical extent of the overturning cells is less limited, and the reduced growth rate is a combination of the reduced value of $f$ and the peak velocity.
+
+Looking at the growth rate as a function of latitude we that it is almost an order of magnitude smaller for the Deep Western Boundary Current than for the North Brazil Current. The latitude of maximal instability is much closer to the equator and the velocity profile ceases to be unstable much closer to the equator too. This suggests that when looking for signs of symmetric instability in the Deep Western Boundary Current we will likely see it occuring much closer to the equator than it does in the North Brazil Current.
 
 \section{Viscous symmetric instability with the complete Coriolis force}
-
 \label{sec:DrasticSI}
     \citet{Zeitlin2018a} states that ``symmetric instability drastically changes upon inclusion of the full Coriolis force.'' The author goes on to perform a linear stability analysis of a zonally symmetric shear flow on an $f$-plane, taking into account the non-traditional component of the full Coriolis force. They find that the growth rate and spatial structure of unstable modes may be significantly altered by inclusion of the full Coriolis force. Na\"ively, one may expect to observe drastic changes in the above numerical simulations, given that on an ordinary $f$-plane there is no difference between a meridional and zonal flow (as the system has no preferred orientation). However, the inclusion of the non-traditional component of the Coriolis force breaks this symmetry and reintroduces a natural meridional direction. To understand how symmetric instability in meridional flows changes under the complete Coriolis force, we must repeat the linear stability analysis of~\citet{Zeitlin2018a} but for the case of a meridional flow.
 

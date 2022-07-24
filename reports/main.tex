@@ -5,6 +5,7 @@
 %\include{mymacros}
 \usepackage{numprint}
 \usepackage[hidelinks]{hyperref}
+\usepackage{layouts}
 
 \title{Symmetric instability in the
         Atlantic Meridional Overturning Circulation}   %note \\[1ex] is a line break in the title
@@ -26,7 +27,10 @@
 \include{acknowledgements}
 \include{abstract}
 \tableofcontents
+
+\newpage
 \listoffigures
+\addcontentsline{toc}{chapter}{List of figures}
 \end{romanpages}
 
 %now include the files of latex for each of the chapters etc
@@ -36,7 +40,7 @@
 \include{chapter4}
 \include{chapter5}
 \include{conclusions}
-
+\include{glossary}
 %now enable appendix numbering format and include any appendices
 %\appendix
 %\include{appendix1}
