@@ -47,8 +47,8 @@
 \renewcommand{\listfigurename}{List of figures} 
 \titleformat{\chapter}[display]{\Huge \usefont{T1}{PTSans-TLF}{m}{n}}{Chapter \ \thechapter}{0.5ex}{}[]
 \titleformat{\section}[hang]{\Large \usefont{T1}{PTSans-TLF}{m}{n}}{\thesection}{0.5em}{}[]
-\titleformat{\subsection}[hang]{\large \usefont{T1}{PTSans-TLF}{m}{it}}{\thesubsection}{0.5em}{}[]
-\titleformat{\subsubsection}[hang]{\usefont{T1}{PTSans-TLF}{m}{n}}{\thesubsubsection}{0.5em}{}[]
+\titleformat{\subsection}[hang]{\large \usefont{T1}{PTSans-TLF}{m}{n}}{\thesubsection}{0.5em}{}[]
+\titleformat{\subsubsection}[hang]{\usefont{T1}{PTSans-TLF}{m}{it}}{\thesubsubsection}{0.5em}{}[]
 \titleformat{\paragraph}[runin]{\usefont{T1}{PTSans-TLF}{m}{sl}}{}{0.5em}{}[]
 
 % Format captions
@@ -62,8 +62,8 @@
 
 \renewcommand{\cftchapfont}{\usefont{T1}{PTSans-TLF}{b}{n}}
 \renewcommand{\cftsecfont}{\usefont{T1}{PTSans-TLF}{m}{n}}
-\renewcommand{\cftsubsecfont}{\usefont{T1}{PTSans-TLF}{m}{it}}
-\renewcommand{\cftsubsubsecfont}{\usefont{T1}{PTSansNarrow-TLF}{m}{n}}
+\renewcommand{\cftsubsecfont}{\usefont{T1}{PTSans-TLF}{m}{n}}
+\renewcommand{\cftsubsubsecfont}{\usefont{T1}{PTSans-TLF}{m}{it}}
 
 \renewcommand{\cftchappagefont}{\usefont{T1}{PTSans-TLF}{m}{n}}
 \renewcommand{\cftsecpagefont}{\usefont{T1}{PTSans-TLF}{m}{n}}
