@@ -1,74 +1,28 @@
-\chapter{Introduction}
+\chapter{The Atlantic Meridional Overturning Circulation \& the importance of mixing}
 \begin{quote}
 \textit{The shape of the sea is always the same. Or rather it's always different, but in the same way.} --- Philip Marsden
 \end{quote}
 
-\section{The Atlantic Meridional Overturning Circulation}
-\begin{itemize}
-    \item Introduce the AMOC
-    \item Explain how and why it's important
-    \item Talk about how our understanding has changed in recent times
-    \item Not a conveyor but variability and mesoscale features
-    \item Introduce the idea that sub-mesoscale instabilities may play a role
-    \item Talk about water mass formation, transformation, and diapycnal mixing
-    \item Talk about the processes missing from the water mass budget.
-\end{itemize}
-The Atlantic Meridional Overturning Circulation (AMOC) is a climatically important circulation that spans the entireity of the Atlantic Ocean basin. In its surface limb, it draw water from the Southern Hemisphere northward across the equator, redistributing climatically import tracers such as heat and carbon as it does so \citep{Buckley2016}. At 26$^\circ$N the AMOC transports around 1.25 PW of heat northward \citep{Bryden2020}, which accounts for around 25\% of the meridional transport of heat by the global atmosphere and ocean at the latitude \citep{Srokosz2012}. The AMOC's contribution to poleward heat transport warms western Europe by around 5$^\circ$C \citep{Jackson2015}.
+The Atlantic Meridional Overturning Circulation (AMOC) is a climatically important circulation that spans the entirety of the Atlantic Ocean basin. In its surface limb, it draws water from the Southern Hemisphere northward across the equator, redistributing climatically import tracers such as heat and carbon as it does so \citep{Buckley2015}. At 26$^\circ$N the AMOC transports around 1.25 PW of heat northward \citep{Bryden2020}, which accounts for around 25\% of the meridional transport of heat by the global atmosphere and ocean at the latitude \citep{Srokosz2012}. The AMOC's contribution to poleward heat transport warms Western Europe by around 5$^\circ$C \citep{Jackson2015}.
 
-\subsection{The Western Boundary Current Systems of  the Tropical Atlantic}
+The AMOC is primarily driven by buoyancy and wind forcings, and diapycnal mixing. In the Arctic, strong buoyancy forcing produces dense North Atlantic Deep Water, which sinks and flows southwards. Along its journey south, this water is diapycnally mixed to form lighter water, which partially closes the overturning cell. The remaining vertical transport occurs in the Southern Ocean where intense, wind-driven Ekman driven upwelling brings the North Atlantic Deep Water to the surface. In order to conserve mass, there is a northward flowing surface cell which draws waters from the Southern Hemisphere across the equator.
 
-\subsection{The Irminger Current}
-
-\section{Potential vorticity \& symmetric instability}
-\begin{itemize}
-    \item Describe the character of symmetric instability
-    \item Link back to mixing
-    \item Introduce PV and the instability criteria
-    \item Touch on links to inertial and gravitational instability but direct the reader to chapter 2 for more depth
-    \item Lead into the subsections which describe ways of making potential vorticity negative.
-\end{itemize}
-
-Symmetric instability is a type of submesoscale instability that generates overturning cells in a plane perpendicular to a mean flow. The overturning cells tend to be oriented so that they are parallel to isopycnal surfaces, and so symmetric instability is often said to produce slantwise convection. Although the instability leads to mixing predominantly along isopycnals, it can also induce diapycnal mixing. Secondary shear instabilities further enhance this mixing.
-
-Symmetric instability is intimately linked to the scaler quantity, Ertel potential vorticity. In the ocean this is defined as
+The AMOC can be represented by a zonally integrated meridional overturning stream-function in density space, defined as
 \begin{equation}
-    \label{eq:PVDefinition}
-    Q = (\mathbf{f} + \curl{\mathbf{u}})\cdot\grad b    
+    \psi(y, \rho) = \int_{x' = x_w}^{x_e} \int_{z' = -H}^{z(x', y, \rho)} V(x', y, z') \dd{z'} \dd{x'} \,.
 \end{equation}
-where $\mathbf{f}$ is the planetary vorticity vector, $\mathbf{u}$ is the velocity field in the rotating frame of reference, and $b = -  g \flatfrac{\rho}{\rho_0}$ is the buoyancy field. $g$ is gravitational acceleration and $\rho_0$ is a constant reference density. One can interpret the potential vorticity as either the component of absolute vorticity normal to isopycnal surfaces and scaled by the isopycnal thickness, or the stratification along a vortex tube and scaled by the absolute vorticity of the vortex, with the former being the most common way of understanding the quantity.
+This naturally leads to a conceptual framework in which the AMOC is viewed as a meridionally coherent and zonally uniform ``global conveyor''. In recent years, it has become apparent that although this framework can be useful for understanding the zonally integrated overturning cell, its basic dynamics, and its impacts, the framework has its limitations. In particular this world view offers little insight when considering the smaller scale, non-uniform dynamics which generate the diapycnal mixing which is so important in maintaining the circulation, and the mesoscale and sub-mesoscale dynamics which can strongly influence the variability of the currents which contribute to the AMOC. It is now increasingly common to think of the AMOC in relation to its many constituent currents and the gyre circulations which contribute to the net-overturning.
 
-In a fluid subjected to no momentum or buoyancy forcing, potential vorticity is materially conserved, i.e.
-\begin{equation}
-    \frac{DQ}{Dt} = 0 \, .
-\end{equation}
-This means if we follow an individual fluid parcel around we expect its potential vorticity to remain constant. This is a fundamental material invariant which arises from a particle relabelling symmetry on isopycnal surfaces in an inviscid fluid~\citep{Salmon1998}.
+The sub-mesoscale dynamics of the Ocean have on recently started to be explored due to the length and time scales over which they operate making observations difficult, and modelling computationally expensive. Since the field's inception, however, it has become abundantly clear that sub-mesoscale flows and instabilities may be key in generating diapycnal mixing, and in cascading energy towards dissipative scales. The hyper-local nature of the sub-mesoscale means that we are still building a picture as to where, when and how much mixing these currents produce, and their impact on larger scale circulations. Understanding the spatial and temporal patterns of mixing generated by the sub-mesoscale is key to understanding how waters are transformed from dense to light and vice versa in the AMOC.
 
-If a fluid is subject to external or dissipative momentum and buoyancy forcings the conservation of potential vorticity  becomes
-\begin{equation}
-    \frac{DQ}{Dt} = \dot{\mathbf{\zeta}} \cdot  \grad{b} + \mathbf{\zeta} \cdot \grad{\dot{b}}
-\end{equation}
-where $\mathbf{\zeta}$ is the absolute vorticity of the field and a ``$\,\cdot{}\,$'' above a quantity represents its material derivative.
+This work will investigate the role of symmetric instability (a sub-mesoscale instability that generates overturning cells) in producing mixing in several western boundary current systems which contribute to the AMOC. In particular, we will examine the North Brazil Current and Deep Western Boundary Current systems of the Tropical Atlantic, and the Irminger Current of the Sub-polar North Atlantic. We will use tools ranging from analytical theory to idealised numerical models in exploring the role symmetric instability may play in each of these current systems.
 
-A necessary but not sufficient condition for the excitement of symmetric instability is that the vertical component of planetary vorticity and the potential vorticity of a fluid have opposite signs. Mathematically we require that
-\begin{equation}
-    \label{eq:PVConservation}
-    f Q < 0 \, ,
-\end{equation}
-where $f$ is the vertical component of the planetary vorticity vector, also known as the Coriolis parameter. This criterion is derived in section~\ref{subsec:InstabilityCriterion}. Waters which satisfy this instability criterion are often described as having anomalous potential vorticity.
+That symmetric instability is present in these current systems is significant as it highlights regions where coarse-grained ocean models and climate models may not accurately represent the mixing that is occurring in the Ocean. We also contribute to theories on the spatio-temporal distribution of sub-mesoscale processes in the ocean, from which an increased understanding of the spatio-temporal patterns of mixing can be inferred.
 
-The overturning cells generated during the excitement of symmetric instability causes the mixing of waters with anomalous potential vorticity. The momentum and stratification of the fluid are reconfigured by this mixing, producing waters with potential  vorticity of approximately zero. This corresponds to the absolute vorticity vector being parallel to isopycnal surfaces.
+In chapter~\ref{chap:2} we will take a closer look at symmetric instability and its ``character''. We will state several properties of the instability and go onto prove them using linear stability theory. Next we will apply this theory to the North Brazil Current and its rings, the Deep Western Boundary Current in the Tropical Atlantic, and the Irminger Current, in order to make predictions about the symmetric instabilities we may expect to see in these currents. In the subsequent chapters we will move away from theory and towards verifying the presence of symmetric instability and quantifying the mixing it induces in a series of idealised models.
 
-Consider now a fluid initially stable to symmetric instability. For it to become symmetrically unstable we must make the quantity $fQ$ negative. There are then two distinct ways to generate symmetric instability in such a fluid: the first is to change the sign of the planetary vorticity, and the second is to change the sign of the potential vorticity.
+We will then move away from theory and towards using idealised numerical models to address the key aim of this work --- the effect of symmetric instability in generating diapycnal mixing in components of the AMOC. In chapter~\ref{chap:3} we will focus on the North Brazil Current, and use a hierarchy of models to demonstrate the presence of symmetric instability. We then quantity the water mass formation and transformation rates in the model and examine the limitations of these calculations.
 
-\subsection{Ekman driven symmetric instability}
-\begin{itemize}
-    \item Explain mechanism
-    \item Discuss frequency and temporal variability of these events.
-    \item Discuss what this means in terms of AMOC and seasonality.
-    \item Link to OSNAP observations and what they miss out.
-\end{itemize}
+Next we look at the generation of symmetric instability in the Deep Western Boundary Current of the Tropical Atlantic. Symmetric instability here is generated by a similar mechanism to that causes instability in the North Brazil Current. We show that, again, symmetric instability is excited and examine the differences in location and strength to those seen in the North Brazil Current, explaining the different spatio-temporal characteristics of the instability. We also show that symmetric instability is capable of generating so-called ``density staircases'' --- regions of low stratification separated by high stratification filaments. These staircases have secondary impacts on diapycnal mixing, although we do not attempt to quantify these effects.
 
-\subsection{Cross equatorial symmetric instability}
-At the equator planetary vorticity changes from being positive in the northern hemisphere to negative in the southern hemisphere. If we consider a fluid parcel originating in one hemisphere, its potential vorticity will typically match the planetary vorticity so as to ensure symmetric stability. We can than imagine advecting this fluid parcel across the equator. As potential vorticity is materially conserved and planetary vorticity changes sign at the equator, we would expect the symmetric instability criterion to be satisfied in the new hemisphere.
-
-This mechanism does not involve buoyancy or momentum forcing, processes which typically must occur in either a surface or bottom boundary layer. This means symmetric instability resulting from a change in sign of planetary vorticity may occur in the ocean interior and has a distinct character when compared to boundary layer instability. A number of recent observational and theoretical studies have investigated the excitement of symmetric instability resulting from the cross-equatorial change in sign of planetary vorticity, notably CITATIONS. These studies have, however, focused on weak circulations in the ocean interior as opposed to vigorous western boundary currents. In these western boundary currents there is a constant supply of waters with large magnitude, anomalous potential vorticity. These equatorial western boundary currents are rich with temporally varying features, such as mesoscale eddies which interact differently with symmetric instabilities depending on the flow regime.
+We will then head to the Sub-polar North Atlantic where we will look at how wind-forcing in the Irminger Current can lead to the excitement of symmetric instability. We use an ensemble of large eddy simulations to investigate how the rates of water mass formation vary with the strength and duration of the wind events. We look at the effect of these events on the mixed layer depth, calculations which could form the foundations of a simple parameterisation of symmetric instability in the region.
