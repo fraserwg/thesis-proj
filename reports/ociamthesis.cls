@@ -35,6 +35,7 @@
 \RequirePackage{natbib}
 \RequirePackage[hidelinks]{hyperref}
 %\RequirePackage{subfigures}
+\RequirePackage{multirow}
 
 \doublespacing
 \captionsetup[table]{font=doublespacing}     %% change 1.2 as you like
