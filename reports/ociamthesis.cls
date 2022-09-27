@@ -20,7 +20,7 @@
 \RequirePackage{ifthen}   % needed for option parsing for logo
 \RequirePackage{fontenc}
 \RequirePackage{watermark}
-\RequirePackage{geometry}
+\RequirePackage[a4paper, top=1in, twoside]{geometry}
 \RequirePackage{tocloft}
 \RequirePackage{caption}
 \RequirePackage{titlesec}
@@ -36,6 +36,7 @@
 \RequirePackage[hidelinks]{hyperref}
 %\RequirePackage{subfigures}
 \RequirePackage{multirow}
+\RequirePackage{longtable}
 
 \doublespacing
 \captionsetup[table]{font=doublespacing}     %% change 1.2 as you like
@@ -51,6 +52,7 @@
 \titleformat{\subsection}[hang]{\large \usefont{T1}{PTSans-TLF}{m}{n}}{\thesubsection}{0.5em}{}[]
 \titleformat{\subsubsection}[hang]{\usefont{T1}{PTSans-TLF}{m}{it}}{\thesubsubsection}{0.5em}{}[]
 \titleformat{\paragraph}[runin]{\usefont{T1}{PTSans-TLF}{m}{sl}}{}{0.5em}{}[]
+
 
 % Format captions
 \DeclareCaptionFont{captionlabel}{\usefont{T1}{PTSansCaption-TLF}{b}{n}}

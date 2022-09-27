@@ -1,40 +1,74 @@
+\chapter*{Software \& data}
+\addcontentsline{toc}{chapter}{Software \& data}
+This work was made possible by several open-source pieces of software. These include MITgcm~\citep{mitgcm}, xarray~\citep{Hoyer2017}, dask~\citep{DaskDevelopmentTeam2016}, xmitgcm~\citep{Abernathey2021}, zarr~\citep{Miles2022}, numpy~\citep{Harris2020}, scipy~\citep{Virtanen2020}, matplotlib~\citep{Hunter2007} and cartopy~\citep{Elson2022}.
+
+The codes used to produce all figures and run all model integrations are available from CITEEEE. Selected model outputs have been archived at CITE.
+
 \chapter*{List of symbols}
 \addcontentsline{toc}{chapter}{List of symbols}
 
-\begin{tabular}{cp{\textwidth}}
-    $x, y, z$ & Cartestian coordinates \\
-    $u, v, w$ & Cartestian components of velocity \\
-    $r, \phi, z$ & Cylindrical polar coordinates \\
-    $v_r, v_\phi, w$ & Cylindrical polar components of velocity \\
-    $t$ & time \\
-    $f$ & Coriolis parameter, the vertical component of planetary vorticity \\
-    $f_0$ & f-plane fella \\
-    $\beta$ & beta-plane fella \\
-    $f'$ & Modified Coriolis parameter, $f + 2 \flatfrac{V_\phi}{r}$ \\
-    $F_{NT}$ & The non-traditional component of the Coriolis force, the meridional component of planetary vorticity. \\
+\begin{quote}
+    \textit{Looks like you missed your Greek lesson again. You know what happens now!} --- the Duolingo Owl
+\end{quote}
+
+\section*{Greek letters}
+\begin{longtable}{cp{\textwidth}}
+    $\alpha_T$ & Thermal expansion coefficient \\
+    $\beta$ & Meridional gradient of planetary vorticity \\
+    $\Gamma$ & The non-traditionality parameter \\
+    $\gamma^n$ & Neutral density \\
+    $\delta_b$ & Bickley jet width \\
+    $\Delta \psi$ & Net volume flux out of a region \\
+    $\zeta$ & Absolute vorticity \\
+    $\theta$ & Latitude \\
+    $\kappa$ & Buoyancy diffusion coefficient \\
+    $\lambda$ & Vertical wavelength \\
+    $\lambda^*$ & Vertical wavelength which maximises $\sigma$ for a given $A_r$ \\
+    $\mathbf{\xi}$ & Relative vorticity, $\curl{\mathbf{u}}$ \\
+    $\xi$, $\xi_y$ & Vertical and meridional components of relative vorticity \\
+    $\Pi$ & Geopotential pressure \\
+    $\rho, \rho_0$ & Density and reference density \\
+    $\sigma$ & A growth rate \\
+    $\tau$ & $\tan\Phi$ \\
+    $\tau_e$ & e-folding timescale \\
+    $\tau_y$ & Meridional wind stress \\
+    $\Phi$ & Angle of disturbance to the horizontal \\
+    $\Phi_{iso}$ & Isopycnal slope \\
+    $\chi$ & Angle of coastline to a meridian \\
+    $\psi$ & An overturning stream function \\
+    $\hat{\psi}$ & The horizontal component of a separable overturning stream function \\
+    $\omega$ & An oscillatory frequency, or growth rate if imaginary \\
+\end{longtable}
+
+\section*{Latin letters}
+\begin{longtable}{cp{\textwidth}}
+    $A_r$ & Vertical viscosity \\
     $b$ & Buoyancy \\
     $D_t$ & Material (advective) derivative \\
-    $\phi$ & Geopotential pressure, latitude, azimuthal coordinate in cylindrical polars, angle of disturbance to the horizontal. \\
-    $\theta$ & Angle of coastline to a meridian \\
-    $Q$ & Ertel potential vorticity \\
+    $\partial_{t'}$ & $\partial_t - A_r \partial^2_{zz}$ \\
+    $E_k$ & Kinetic energy \\
+    $\mathbf{f}$ & Planetary vorticity vector \\
+    $f$ & Coriolis parameter, the vertical component of planetary vorticity \\
+    $f_0$ & Planetary vorticity on an f-plane \\
+    $f'$ & Modified Coriolis parameter, $f + 2 \flatfrac{V_\phi}{r}$ \\
+    $F_{NT}$ & The meridional or non-traditional component of planetary vorticity. \\
+    $\mathcal{F}_x, \mathcal{F}_z$ & Zonal and meridional components of a force \\
+    $\mathscr{F}$ & Water mass formation rate \\
     $g$ & Gravitational acceleration \\
-    $\rho, \rho_0$ & Density and reference density \\
-    $\gamma^n$ & Neutral density \\
-    $\sigma$ & Density - 1,000 kg$\,$m$^{-3}$, a growth rate \\
-    $\zeta$ & Absolute vorticity \\
-    $\xi$ & Relative vorticity \\
-    $N^2, M^2$ & Vertical and horizontal derivatives of buoyancy \\
-    $\omega$ & An oscillatory frequency, or growth rate if imaginary \\
-    $E_k$ & A kinetic energy \\
-    $\psi$ & An overturning streamfunction \\
-    $\hat{\psi}$ & The horizontal component of a separable overturning streamfunction \\
-    $\hat{\omega}^2$ & A funky fella \\
-    $m$ & A vertical wavenumber \\
-    $k$ & A horizontal wavenumber or wavenumber magnitude \\
-    $\kappa$ & Buoyancy diffusion coefficient \\
-    $A_r$ & Viscosity \\
-    $\mathcal{F_x}, \mathcal{F_z}$ & Horizontal and vertical components of an irrotational force \\
-    $\gamma$ & The non-traditionality parameter \\
+    $G$ & Diapycnal volume flux \\
     $H$ & A vertical length scale \\
+    $k$ & A horizontal wavenumber or wavenumber magnitude \\
     $L$ & A horizontal length scale \\
-  \end{tabular}
+    $m$ & A vertical wavenumber \\
+    $N^2, M^2$ & Vertical and horizontal derivatives of buoyancy \\
+    $Q$ & Ertel potential vorticity \\
+    $r, \phi, z$ & Cylindrical polar coordinates \\
+    Sv & Sverdrup --- unit of $1 \times 10^{6}$~m$^3$\,s$^{-1}$ \\
+    $t$ & time \\
+    $T$, $T_0$ & Temperature, reference temperature \\
+    $u, v, w$ & Cartesian components of velocity \\
+    $v_r, v_\phi, w$ & Cylindrical polar components of velocity \\
+    $\mathcal{V}$ & Volume enclosed by two isopycnals \\
+    $x, y, z$ & Cartesian coordinates \\
+\end{longtable}
+    
