@@ -24,7 +24,8 @@
 \RequirePackage{tocloft}
 \RequirePackage{caption}
 \RequirePackage{titlesec}
-%\RequirePackage{amssymb}
+\RequirePackage{mathfont}
+\RequirePackage{amssymb}
 %\RequirePackage{amsmath}
 \RequirePackage{euler}
 \RequirePackage{physics}
@@ -53,6 +54,8 @@
 \titleformat{\subsubsection}[hang]{\usefont{T1}{PTSans-TLF}{m}{it}}{\thesubsubsection}{0.5em}{}[]
 \titleformat{\paragraph}[runin]{\usefont{T1}{PTSans-TLF}{m}{sl}}{}{0.5em}{}[]
 
+% Sets the number mathfont to PT serif
+\mathfont[digits]{PT Serif}
 
 % Format captions
 \DeclareCaptionFont{captionlabel}{\usefont{T1}{PTSansCaption-TLF}{b}{n}}
