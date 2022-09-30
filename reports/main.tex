@@ -22,8 +22,19 @@
 
 \maketitle
 
-\begin{romanpages} 
-\include{dedication}
+\begin{romanpages}
+
+\pagestyle{fancy}
+\fancypagestyle{plain}{%
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhf{}
+  \fancyfoot[C]{\usefont{T1}{PTSans-TLF}{m}{n}{\thepage}}
+}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\fancyfoot[C]{\usefont{T1}{PTSans-TLF}{m}{n}{\thepage}}
+
+%\include{dedication}
 \include{acknowledgements}
 \include{abstract}
 \tableofcontents
@@ -34,12 +45,40 @@
 \end{romanpages}
 
 %now include the files of latex for each of the chapters etc
+
+\renewcommand{\chaptermark}[1]{%
+  \markboth{\usefont{T1}{PTSans-TLF}{m}{n}{#1}}{}
+}
+
+\pagestyle{fancy}
+\fancyhead[LE, RO]{\usefont{T1}{PTSans-TLF}{m}{n}{\thepage}}
+\fancyhead[RE]{\usefont{T1}{PTSans-TLF}{m}{n}{\chaptername\ \thechapter}}
+%\fancyhead[LO]{\chaptermark}
+\fancyfoot{}
+
+\fancypagestyle{plain}{%
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhf{}
+  \fancyfoot[C]{\usefont{T1}{PTSans-TLF}{m}{n}{\thepage}}
+}
+
 \include{chapter1}
 \include{chapter2}
 \include{chapter3}
 \include{chapter4}
 \include{chapter5}
 \include{conclusions}
+
+\pagestyle{fancy}
+\fancypagestyle{plain}{%
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhf{}
+  \fancyfoot[C]{\usefont{T1}{PTSans-TLF}{m}{n}{\thepage}}
+}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\fancyfoot[C]{\usefont{T1}{PTSans-TLF}{m}{n}{\thepage}}
+
 \include{glossary}
 %now enable appendix numbering format and include any appendices
 %\appendix

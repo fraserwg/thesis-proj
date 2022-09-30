@@ -12,7 +12,7 @@
 \DeclareOption{rectanglelogo}{\def\logoversion{rectanglelogo}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 \ProcessOptions\relax
-\LoadClass[a4paper]{report}
+\LoadClass[a4paper, twoside, openright]{report}
 % As an alternative to the above could use next line for twosided output
 %\LoadClass[a4paper,twoside,openright]{report}
 
@@ -26,6 +26,8 @@
 \RequirePackage{titlesec}
 \RequirePackage{mathfont}
 \RequirePackage{amssymb}
+\RequirePackage{fancyhdr}
+\RequirePackage{emptypage}
 %\RequirePackage{amsmath}
 \RequirePackage{euler}
 \RequirePackage{physics}
