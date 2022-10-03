@@ -160,7 +160,7 @@ FUNCTION {embolden}
 FUNCTION {quote}
 { duplicate$ empty$
     { pop$ "" }
-    { "`" swap$ * "'" * }
+    { "``" swap$ * "''" * }
   if$
 }
 
