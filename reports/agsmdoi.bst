@@ -723,7 +723,7 @@ FUNCTION {article}
   new.block
   note output
   write.doi output
-  fin.entry
+  fin.doi
 }
 
 FUNCTION {book}
@@ -756,7 +756,7 @@ FUNCTION {book}
   new.block
   note output
   write.doi output
-  fin.entry
+  fin.doi
   write.url
 }
 
@@ -773,7 +773,7 @@ FUNCTION {booklet}
   new.block
   note output
   write.doi output
-  fin.entry
+  fin.doi
   write.url
 }
 
@@ -808,7 +808,7 @@ FUNCTION {inbook}
   new.block
   note output
   write.doi output
-  fin.entry
+  fin.doi
   write.url
 }
 
@@ -836,7 +836,7 @@ FUNCTION {incollection}
   new.block
   note output
   write.doi output
-  fin.entry
+  fin.doi
   write.url
 }
 
@@ -871,7 +871,7 @@ FUNCTION {inproceedings}
   new.block
   note output
   write.doi output
-  fin.entry
+  fin.doi
   write.url
 }
 
@@ -899,7 +899,7 @@ FUNCTION {manual}
   new.block
   note output
   write.doi output
-  fin.entry
+  fin.doi
   write.url
 }
 
@@ -918,7 +918,7 @@ FUNCTION {mastersthesis}
   new.block
   note output
   write.doi output
-  fin.entry
+  fin.doi
   write.url
 }
 
@@ -934,7 +934,7 @@ FUNCTION {misc}
   new.block
   note output
   write.doi output
-  fin.entry
+  fin.doi
   write.url
   empty.misc.check
 }
@@ -954,7 +954,7 @@ FUNCTION {phdthesis}
   new.block
   note output
   write.doi output
-  fin.entry
+  fin.doi
   write.url
 }
 
@@ -973,7 +973,7 @@ FUNCTION {phdtransfer}
   new.block
   note output
   write.doi output
-  fin.entry
+  fin.doi
   write.url
 }
 
@@ -1006,7 +1006,7 @@ FUNCTION {proceedings}
   new.block
   note output
   write.doi output
-  fin.entry
+  fin.doi
   write.url
 }
 
@@ -1025,7 +1025,7 @@ FUNCTION {techreport}
   new.block
   note output
   write.doi output
-  fin.entry
+  fin.doi
   write.url
 }
 
@@ -1041,7 +1041,7 @@ FUNCTION {unpublished}
   new.block
   note "note" output.check
   write.doi output
-  fin.entry
+  fin.doi
   write.url
 }
 
