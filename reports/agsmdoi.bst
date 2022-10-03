@@ -107,6 +107,10 @@ FUNCTION {fin.entry}
   newline$
 }
 
+FUNCTION {fin.doi}
+{ write$
+newline$}
+
 FUNCTION {new.block}
 { output.state before.all =
     'skip$
@@ -161,16 +165,19 @@ FUNCTION {quote}
 }
 
 FUNCTION {write.url}
-{ URL empty$
+{ doi empty$
+    { URL empty$
+      { skip$ }
+      { "\newline\harvardurl{" URL * "}" * write$ newline$ }
+      if$}
     { skip$ }
-    { "\newline\harvardurl{" URL * "}" * write$ newline$ }
   if$
 }
 
 FUNCTION {write.doi}
 { doi empty$
     { "" }
-    { new.block "\doi{" doi * "}" * }
+    { "\newline\doi{" doi * "}" * }
   if$ 
 }
 

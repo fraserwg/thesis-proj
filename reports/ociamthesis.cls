@@ -46,7 +46,7 @@
 \captionsetup[figure]{font=doublespacing}  
 
 \setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
+\setcounter{tocdepth}{2}
 
 % Format section headings
 \renewcommand{\listfigurename}{List of figures} 
@@ -93,7 +93,7 @@
 
 %define the default submitted text
 \newcommand{\submittedtext}{{A thesis submitted for the degree of}}
-\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi: #1}}
+\newcommand{\doi}[1]{\href{https://dx.doi.org/#1}{\textbf{doi:} \textit{#1}}}
 %
 % DECLARATIONS
 %
