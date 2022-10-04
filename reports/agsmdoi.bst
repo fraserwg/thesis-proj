@@ -168,11 +168,13 @@ FUNCTION {write.url}
 { doi empty$
     { URL empty$
       { skip$ }
-      { "\newline\harvardurl{" URL * "}" * write$ newline$ }
-      if$}
-    { skip$ }
+      { "\newline\textbf{url:} \url{" URL * "}" * write$ newline$}
+      %{\textbf{url:} \textit{" * "test" * "}}" * write$ newline$}
+    if$}
+  { skip$ }
   if$
 }
+
 
 FUNCTION {write.doi}
 { doi empty$
@@ -724,6 +726,7 @@ FUNCTION {article}
   note output
   write.doi output
   fin.doi
+  write.url
 }
 
 FUNCTION {book}

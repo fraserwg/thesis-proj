@@ -86,6 +86,7 @@
 \renewcommand{\cfttabfont}{\usefont{T1}{PTSans-TLF}{m}{n}}
 %\renewcommand{\cftsubtabfont}{\usefont{T1}{PTSans-TLF}{m}{it}}
 
+\renewcommand\UrlFont{\usefont{T1}{PTSerif-TLF}{m}{sl}}
 
 \assignpagestyle{\page}{\usefont{T1}{PTSans-TLF}{m}{n}}
 
@@ -94,6 +95,8 @@
 %define the default submitted text
 \newcommand{\submittedtext}{{A thesis submitted for the degree of}}
 \newcommand{\doi}[1]{\href{https://dx.doi.org/#1}{\textbf{doi:} \textit{#1}}}
+\newcommand{\myurl}[1]{\href{#1}{\textbf{url:} \textit{#1}}}
+
 %
 % DECLARATIONS
 %
@@ -143,7 +146,7 @@
 {
 % Latest Logo, Square version (the default!)
 % you need an oxlogo.eps or oxlogo.pdf file as appropriate
-\def\logo{{\includegraphics[width=7cm]{oxford_logo}}}
+\def\logo{{\includegraphics[width=5cm]{oxford_logo}}}
 }{}
 
 %
@@ -241,7 +244,7 @@
 {\begin{alwayssingle} \thispagestyle{plain}
 \begin{center}
 \vspace*{1.5cm}
-{\Large \bfseries Acknowledgements}
+{\Large \usefont{T1}{PTSans-TLF}{m}{n} Acknowledgements}
 \end{center}
 \vspace{0.5cm}}
 {\end{alwayssingle}}
@@ -300,7 +303,7 @@
 \newenvironment{abstractlong} {\begin{alwayssingle} \thispagestyle{plain}
   \begin{center}
   \vspace*{1.5cm}
-  {\Large \bfseries  Abstract}
+  {\Large \usefont{T1}{PTSans-TLF}{m}{n}  Abstract}
   \end{center}
   \vspace{0.5cm}}
 {\end{alwayssingle}}
