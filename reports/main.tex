@@ -34,7 +34,7 @@
 \fancyhf{}
 \fancyfoot[C]{\usefont{T1}{PTSans-TLF}{m}{n}{\thepage}}
 
-%\include{dedication}
+\include{dedication}
 \include{acknowledgements}
 \include{abstract}
 \tableofcontents
@@ -43,6 +43,7 @@
 %\listoffigures
 %\addcontentsline{toc}{chapter}{List of figures}
 \end{romanpages}
+
 
 %now include the files of latex for each of the chapters etc
 
@@ -61,6 +62,9 @@
   \fancyhf{}
   \fancyfoot[C]{\usefont{T1}{PTSans-TLF}{m}{n}{\thepage}}
 }
+
+\setlength{\headheight}{14.5pt}
+\addtolength{\topmargin}{-2.5pt}
 
 \include{chapter1}
 \include{chapter2}
@@ -86,10 +90,11 @@
 %\include{appendix2}
 
 %next line adds the Bibliography to the contents page
+\cleardoublepage
+\phantomsection
 \addcontentsline{toc}{chapter}{References}
-%uncomment next line to change bibliography name to references
 \renewcommand{\bibname}{References}
-\bibliography{library}        %use a bibtex bibliography file refs.bib
+\bibliography{library}    %use a bibtex bibliography file refs.bib
 \bibliographystyle{agsmdoi}
 
 \end{document}
