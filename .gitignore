@@ -305,3 +305,4 @@ thesis-proj.code-workspace
 figures/
 **.tmp*
 **.icloud
+**.DS_Store
