@@ -183,6 +183,20 @@ FUNCTION {write.doi}
   if$ 
 }
 
+FUNCTION {write.howpublished}
+{ howpublished empty$
+    { "" }
+    { "published on " howpublished * }
+  if$ 
+}
+
+FUNCTION {write.type}
+{ type empty$
+    { "" }
+    { type }
+  if$ 
+}
+
 INTEGERS { nameptr namesleft numnames }
 
 FUNCTION {format.names}
@@ -933,7 +947,9 @@ FUNCTION {misc}
     { skip$ }
     { format.title quote output }
   if$
-  howpublished output
+  new.block
+  write.type output
+  write.howpublished output
   new.block
   note output
   write.doi output
@@ -941,6 +957,9 @@ FUNCTION {misc}
   write.url
   empty.misc.check
 }
+
+% Add if type == dataset
+% Add if type == software
 
 FUNCTION {phdthesis}
 { output.bibitem
