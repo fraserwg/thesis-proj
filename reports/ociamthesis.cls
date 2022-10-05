@@ -327,6 +327,8 @@
   \end{center}}
 {\end{alwayssingle}}
 
+
+\interfootnotelinepenalty=10000
 %ROMANPAGES
 %
 % The romanpages environment set the page numbering to lowercase roman one
