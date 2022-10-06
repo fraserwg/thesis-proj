@@ -186,7 +186,7 @@ FUNCTION {write.doi}
 FUNCTION {write.howpublished}
 { howpublished empty$
     { "" }
-    { "published on " howpublished * }
+    { "published on \textit{" howpublished * "}" * }
   if$ 
 }
 
